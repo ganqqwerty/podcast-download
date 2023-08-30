@@ -6,6 +6,30 @@ from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 
 
+def parse_episode_info(article):
+    entry_title = article.find("h2", {"class": "entry-title"})
+    episode_number = '000'
+    episode_name = ''
+
+    if entry_title:
+        episode_info = entry_title.text.strip()
+        temp_number = ""
+        for char in episode_info:
+            if char.isdigit():
+                temp_number += char
+            else:
+                break
+
+        if temp_number:
+            episode_number = temp_number.zfill(3)
+
+        # Extract the name after '#<episode_number>'
+        episode_name_part = episode_info.split('」', 1)[0].split('「', 1)[-1]
+        episode_name = episode_name_part
+
+    return episode_number, episode_name
+
+
 def download_audios(base_url, save_path, first_page, last_page, delay):
     print("Initializing audio download...")
 
@@ -43,30 +67,34 @@ def download_audios(base_url, save_path, first_page, last_page, delay):
         print(f"Found {mp3_links_count} .mp3 links on page {page_num}.")
 
         # Locate the download link for each podcast entry
+        # Inside the loop for articles
         for article in articles:
             audio_tag = article.find("audio", {"class": "clip"})
             if audio_tag:
                 source_tag = audio_tag.find("source")
                 if source_tag and 'src' in source_tag.attrs:
                     audio_url = source_tag['src']
-                    file_name = os.path.basename(audio_url)
+
+                    episode_number, episode_name = parse_episode_info(article)
+                    file_name = f"{episode_number}_{episode_name}.mp3"
+
                     print(f"Preparing to download {file_name}...")
-                    try:
-                        with requests.get(audio_url, headers=headers, stream=True) as r:
-                            r.raise_for_status()
-                            with open(os.path.join(save_path, file_name), 'wb') as file:
-                                for chunk in r.iter_content(chunk_size=8192):
-                                    file.write(chunk)
-                        print(f"{file_name} downloaded successfully!")
-                    except requests.RequestException as e:
-                        print(f"Error downloading {file_name}: {e}")
+            try:
+                with requests.get(audio_url, headers=headers, stream=True) as r:
+                    r.raise_for_status()
+                    with open(os.path.join(save_path, file_name), 'wb') as file:
+                        for chunk in r.iter_content(chunk_size=8192):
+                            file.write(chunk)
+                print(f"{file_name} downloaded successfully!")
+            except requests.RequestException as e:
+                print(f"Error downloading {file_name}: {e}")
 
-                    # Wait for specified delay time after downloading a file
-                    print(f"Waiting for {delay} seconds before next download...")
-                    time.sleep(delay)
+                # Wait for specified delay time after downloading a file
+            print(f"Waiting for {delay} seconds before next download...")
+            time.sleep(delay)
 
-    print("Finished downloading audios.")
 
+print("Finished downloading audios.")
 
 if __name__ == '__main__':
     print("Starting script...")
