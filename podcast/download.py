@@ -6,6 +6,13 @@ from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 
 
+from bs4 import BeautifulSoup
+import requests
+from fake_useragent import UserAgent
+import os
+import time
+from urllib.parse import unquote  # Importing this to decode the URL
+
 def download_audios(base_url, save_path, first_page, last_page, delay):
     print("Initializing audio download...")
 
@@ -17,7 +24,7 @@ def download_audios(base_url, save_path, first_page, last_page, delay):
     else:
         print(f"Directory {save_path} already exists.")
 
-    for page_num in range(first_page, last_page + 1):
+    for page_num in range(last_page, first_page - 1, -1):  # Adjusted this loop to go in reverse
         url = f"{base_url}/page/{page_num}/"
         print(f"Fetching content from {url}...")
 
@@ -34,22 +41,18 @@ def download_audios(base_url, save_path, first_page, last_page, delay):
             continue
 
         soup = BeautifulSoup(response.content, 'html.parser')
-
         articles = soup.find_all("article", {"class": "post"})
 
-        # Count the number of .mp3 links
-        mp3_links_count = len([article.find("audio", {"class": "clip"}) for article in articles if
-                               article.find("audio", {"class": "clip"})])
+        mp3_links_count = len([article.find("audio", {"class": "clip"}) for article in articles if article.find("audio", {"class": "clip"})])
         print(f"Found {mp3_links_count} .mp3 links on page {page_num}.")
 
-        # Locate the download link for each podcast entry
         for article in articles:
             audio_tag = article.find("audio", {"class": "clip"})
             if audio_tag:
                 source_tag = audio_tag.find("source")
                 if source_tag and 'src' in source_tag.attrs:
                     audio_url = source_tag['src']
-                    file_name = os.path.basename(audio_url)
+                    file_name = unquote(os.path.basename(audio_url))  # Decoding the URL-encoded filename here
                     print(f"Preparing to download {file_name}...")
                     try:
                         with requests.get(audio_url, headers=headers, stream=True) as r:
@@ -61,11 +64,11 @@ def download_audios(base_url, save_path, first_page, last_page, delay):
                     except requests.RequestException as e:
                         print(f"Error downloading {file_name}: {e}")
 
-                    # Wait for specified delay time after downloading a file
                     print(f"Waiting for {delay} seconds before next download...")
                     time.sleep(delay)
 
     print("Finished downloading audios.")
+
 
 
 if __name__ == '__main__':
