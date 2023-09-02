@@ -1,17 +1,30 @@
 import argparse
-import os
-import time
-import requests
-from bs4 import BeautifulSoup
-from fake_useragent import UserAgent
-
-
 from bs4 import BeautifulSoup
 import requests
 from fake_useragent import UserAgent
 import os
 import time
 from urllib.parse import unquote  # Importing this to decode the URL
+
+import re
+
+def format_filename(file_name):
+    """
+    Formats the filename to ensure numbers at the start are at least three digits.
+
+    Args:
+    - file_name (str): Original filename
+
+    Returns:
+    - str: Reformatted filename
+    """
+    match = re.match(r'^(\d+)', file_name)
+    if match:
+        number_part = match.group(1)
+        formatted_number = f"{int(number_part):03}"  # Format the number to have at least three digits
+        return file_name.replace(number_part, formatted_number, 1)
+    return file_name
+
 
 def download_audios(base_url, save_path, first_page, last_page, delay):
     print("Initializing audio download...")
@@ -53,6 +66,7 @@ def download_audios(base_url, save_path, first_page, last_page, delay):
                 if source_tag and 'src' in source_tag.attrs:
                     audio_url = source_tag['src']
                     file_name = unquote(os.path.basename(audio_url))  # Decoding the URL-encoded filename here
+                    file_name = format_filename(file_name)  #
                     print(f"Preparing to download {file_name}...")
                     try:
                         with requests.get(audio_url, headers=headers, stream=True) as r:
