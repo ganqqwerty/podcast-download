@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="works well, but not 3-digit nubmers">
-      <change afterPath="$PROJECT_DIR$/convert-and-subtitle.py" afterDir="false" />
+    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="subtitle extraction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/podcast/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/podcast/download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convert-and-subtitle.py" beforeDir="false" afterPath="$PROJECT_DIR$/convert-and-subtitle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693419531565</updated>
       <workItem from="1693419532814" duration="10954000" />
-      <workItem from="1693602585955" duration="1005000" />
+      <workItem from="1693602585955" duration="1391000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1693420959495</created>
@@ -131,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693423691478</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="subtitle extraction">
+      <created>1693651619793</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693651619793</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +190,8 @@
     <MESSAGE value="working but bad name" />
     <MESSAGE value="better naming but numbers bad" />
     <MESSAGE value="works well, but not 3-digit nubmers" />
-    <option name="LAST_COMMIT_MESSAGE" value="works well, but not 3-digit nubmers" />
+    <MESSAGE value="subtitle extraction" />
+    <option name="LAST_COMMIT_MESSAGE" value="subtitle extraction" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/podcast_download$download.coverage" NAME="download Coverage Results" MODIFIED="1693428755324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />

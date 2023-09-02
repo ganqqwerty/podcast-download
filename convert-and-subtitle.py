@@ -1,6 +1,25 @@
 import os
 import argparse
 import subprocess
+import time
+
+def format_duration(seconds):
+    """Formats a time duration into a string of the form HH:MM:SS."""
+    hours = int(seconds // 3600)
+    minutes = int((seconds % 3600) // 60)
+    seconds = int(seconds % 60)
+    return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+
+def estimate_time_left(files_sizes, bytes_processed, start_time):
+    current_time = time.time()
+    elapsed_time = current_time - start_time
+    bytes_per_second = bytes_processed / elapsed_time
+
+    remaining_bytes = sum(files_sizes) - bytes_processed
+    estimated_time_left_seconds = remaining_bytes / bytes_per_second if bytes_per_second != 0 else 0
+
+    return format_duration(estimated_time_left_seconds)
+
 
 def convert_mp3_to_wav(mp3_filepath, wav_filepath):
     # Check if the WAV file already exists and is not empty
@@ -44,6 +63,16 @@ def generate_subtitles(wav_filepath):
     subprocess.run(cmd, check=True)
 
 def process_directory(directory_path):
+    files_sizes = []
+    bytes_processed = 0
+    start_time = time.time()
+
+    for filename in sorted(os.listdir(directory_path)):
+        if filename.endswith(".mp3"):
+            mp3_filepath = os.path.join(directory_path, filename)
+            file_size = os.path.getsize(mp3_filepath)
+            files_sizes.append(file_size)
+
     for filename in os.listdir(directory_path):
         if filename.endswith(".mp3"):
             mp3_filepath = os.path.join(directory_path, filename)
@@ -57,10 +86,15 @@ def process_directory(directory_path):
 
             convert_mp3_to_wav(mp3_filepath, wav_filepath)
             generate_subtitles(wav_filepath)
+            # Update bytes processed
+            bytes_processed += os.path.getsize(mp3_filepath)
+
+            # Print the estimated time left
+            time_left = estimate_time_left(files_sizes, bytes_processed, start_time)
+            print(f"Estimated time left: {time_left:.2f} seconds")
 
             # Optionally, delete the WAV file after processing if needed.
             # os.remove(wav_filepath)
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert MP3 files to WAV and generate SRT subtitles.")
     parser.add_argument("dir", type=str, help="Directory containing MP3 files.")
