@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="subtitle extraction">
+    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="all kinds of scripts added">
+      <change afterPath="$PROJECT_DIR$/convert_srt_to_txt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/move_files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/srt2html.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/convert-and-subtitle.py" beforeDir="false" afterPath="$PROJECT_DIR$/convert-and-subtitle.py" afterDir="false" />
     </list>
@@ -34,24 +37,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/iuriikatkov/IdeaProjects/podcast-download/podcast/teppei",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;HTML&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "HTML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/podcast/teppei" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/podcast/processed" />
       <recent name="$PROJECT_DIR$/podcast" />
     </key>
   </component>
@@ -93,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693419531565</updated>
       <workItem from="1693419532814" duration="10954000" />
-      <workItem from="1693602585955" duration="1391000" />
+      <workItem from="1693602585955" duration="11861000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1693420959495</created>
@@ -137,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693651619793</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="sorted files subtitle extraction">
+      <created>1693651921835</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693651921835</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +207,9 @@
     <MESSAGE value="better naming but numbers bad" />
     <MESSAGE value="works well, but not 3-digit nubmers" />
     <MESSAGE value="subtitle extraction" />
-    <option name="LAST_COMMIT_MESSAGE" value="subtitle extraction" />
+    <MESSAGE value="sorted files subtitle extraction" />
+    <MESSAGE value="all kinds of scripts added" />
+    <option name="LAST_COMMIT_MESSAGE" value="all kinds of scripts added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/podcast_download$download.coverage" NAME="download Coverage Results" MODIFIED="1693428755324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
