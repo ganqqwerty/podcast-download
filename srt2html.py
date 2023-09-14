@@ -1,42 +1,9 @@
 import argparse
 import os
 
-from Mykytea import Mykytea
-
-
-def add_furigana(text):
-    # create an object with an option string
-    mk = Mykytea("-model ./jp-0.4.7-1.mod")
-
-    # Get all analyzed tags for potential readings
-    tags = mk.getAllTags(text)
-
-    furigana_list = []
-    all_readings = []
-
-    for word in tags:
-        surface = word.surface
-        readings = [reading[0] for reading in word.tag[1]]
-        primary_reading = readings[0]
-
-        if surface != primary_reading:
-            furigana_list.append(f"{surface}({primary_reading})")
-        else:
-            furigana_list.append(surface)
-
-        all_readings.append("/".join(readings))
-
-    furigana_text = " ".join(furigana_list)
-    readings_attribute = " ".join(all_readings)
-
-    return furigana_text, readings_attribute
-
-
-
 def read_srt(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         return file.read().strip().split('\n\n')
-
 
 def extract_timestamp_and_text(srt_block):
     lines = srt_block.split('\n')
@@ -48,21 +15,15 @@ def extract_timestamp_and_text(srt_block):
     text = ' '.join(lines[2:])
     return visible_start, start_timestamp, end_timestamp, text
 
-
 def generate_html_content(srt_blocks):
     html_blocks = []
 
     for idx, block in enumerate(srt_blocks, 1):
         visible_timestamp, start_timestamp, end_timestamp, text = extract_timestamp_and_text(block)
-
-        text_with_furigana, possible_readings = add_furigana(text)
-        html_block = f'<div>\n\t<a id="sub-{idx}" href="#sub-{idx}"><span class="timestamp" data-subbegin="{start_timestamp}" data-subend="{end_timestamp}" data-possiblereadings="{possible_readings}">{visible_timestamp}</span></a>\n\t<p class="subtitle-text">{text_with_furigana}</p>\n</div>\n'
-        print(html_block)
-        html_blocks.append(html_block)
+        html_blocks.append(
+            f'<div>\n\t<a id="sub-{idx}" href="#sub-{idx}"><span class="timestamp" data-subbegin="{start_timestamp}" data-subend="{end_timestamp}">{visible_timestamp}</span></a>\n\t<p class="subtitle-text">{text}</p>\n</div>\n')
 
     return '\n'.join(html_blocks)
-
-
 
 def wrap_html(html_content, filename):
     template = '''<!DOCTYPE html>
@@ -108,7 +69,6 @@ def wrap_html(html_content, filename):
 '''
     return template.format(content=html_content, filename=filename)
 
-
 def main():
     parser = argparse.ArgumentParser(description="Convert .srt file to an HTML format with custom styling.")
     parser.add_argument('input', type=str, help="Path to the .srt file")
@@ -128,7 +88,6 @@ def main():
         out_file.write(final_html)
 
     print(f"HTML file generated at: {args.output}")
-
 
 if __name__ == "__main__":
     main()
