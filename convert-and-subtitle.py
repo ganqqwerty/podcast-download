@@ -24,25 +24,30 @@ def estimate_time_left(files_sizes, bytes_processed, start_time):
 
 
 def convert_mp3_to_wav(mp3_filepath, wav_filepath):
-    # Check if the WAV file already exists and is not empty
-    if os.path.exists(wav_filepath) and os.path.getsize(wav_filepath) > 0:
-        print(f"WAV file {wav_filepath} already exists and is not empty. Skipping conversion.")
-        return
+    try:
+        # Check if the WAV file already exists and is not empty
+        if os.path.exists(wav_filepath) and os.path.getsize(wav_filepath) > 0:
+            print(f"WAV file {wav_filepath} already exists and is not empty. Skipping conversion.")
+            return
 
-    print(f"Converting {mp3_filepath} to {wav_filepath}...")
-    FNULL = open(os.devnull, 'w')
-    cmd = [
-        "ffmpeg",
-        "-nostdin",
-        "-threads", "0",
-        "-i", mp3_filepath,
-        "-f", "wav",
-        "-ac", "1",
-        "-acodec", "pcm_s16le",
-        "-ar", "16000",
-        wav_filepath
-    ]
-    subprocess.run(cmd, stdout=FNULL, stderr=subprocess.STDOUT, check=True)
+        print(f"Converting {mp3_filepath} to {wav_filepath}...")
+        FNULL = open(os.devnull, 'w')
+        cmd = [
+            "ffmpeg",
+            "-nostdin",
+            "-threads", "0",
+            "-i", mp3_filepath,
+            "-f", "wav",
+            "-ac", "1",
+            "-acodec", "pcm_s16le",
+            "-ar", "16000",
+            wav_filepath
+        ]
+        subprocess.run(cmd, stdout=FNULL, stderr=subprocess.STDOUT, check=True)
+    except subprocess.CalledProcessError:
+        print(f"Error during conversion for {mp3_filepath}. Skipping this file.")
+    except Exception as e:
+        print(f"Unexpected error during conversion for {mp3_filepath}: {e}. Skipping this file.")
 
 
 def generate_subtitles(wav_filepath):
@@ -54,26 +59,33 @@ def generate_subtitles(wav_filepath):
     print(cmd)
     subprocess.run(cmd, shell=True, check=True)
 
-    # Now, read the output from the temp_output_file and check for repeated lines
-    with open(temp_output_file, 'r') as f:
-        lines = f.readlines()
+    try:
+        # Now, read the output from the temp_output_file and check for repeated lines
+        with open(temp_output_file, 'r', encoding="utf-8") as f:
+            lines = f.readlines()
 
-    consecutive_duplicate_count = 0
-    last_line_content = ""
-    for line in lines:
-        line_content = line.strip().split(']')[-1].strip()
-        if line_content == last_line_content:
-            consecutive_duplicate_count += 1
-        else:
-            consecutive_duplicate_count = 0
-            last_line_content = line_content
+        consecutive_duplicate_count = 0
+        last_line_content = ""
+        for line in lines:
+            line_content = line.strip().split(']')[-1].strip()
+            if line_content == last_line_content:
+                consecutive_duplicate_count += 1
+            else:
+                consecutive_duplicate_count = 0
+                last_line_content = line_content
 
-        if consecutive_duplicate_count > 5:
-            os.rename(f"{output_name}.srt", f"{output_name}_buggy.srt")
-            break
+            if consecutive_duplicate_count > 5:
+                os.rename(f"{output_name}.srt", f"{output_name}_buggy.srt")
+                break
 
+    except UnicodeDecodeError:
+        print(f"Error decoding file: {temp_output_file}. Skipping post-process for this file.")
+    except subprocess.CalledProcessError:
+        print(f"CalledProcessError during subtitle generation for {wav_filepath}. Skipping this file.")
+    except Exception as e:
+        print(f"Unexpected error during subtitle generation for {wav_filepath}: {e}. Skipping this file.")
     # Optionally, remove the temporary output file
-    os.remove(temp_output_file)
+    # os.remove(temp_output_file)
 
 
 def process_directory(directory_path):

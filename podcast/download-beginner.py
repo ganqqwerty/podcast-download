@@ -8,22 +8,29 @@ from urllib.parse import unquote  # Importing this to decode the URL
 
 import re
 
-def format_filename(file_name):
+def format_filename(title):
     """
-    Formats the filename to ensure numbers at the start are at least four digits.
+    Extracts the episode number from the title, removes leading #, formats it to have at least four digits,
+    and adds an underscore between the episode number and the rest of the title.
 
     Args:
-    - file_name (str): Original filename
+    - title (str): Original title from the h2 tag
 
     Returns:
     - str: Reformatted filename
     """
-    match = re.match(r'^(\d+)', file_name)
+    # Remove the leading '#'
+    title = title.replace("#", "", 1)
+
+    # Extract the episode number using regex
+    match = re.match(r'^(\d+)', title)
     if match:
         number_part = match.group(1)
         formatted_number = f"{int(number_part):04}"  # Format the number to have at least four digits
-        return file_name.replace(number_part, formatted_number, 1)
-    return file_name
+        title = title.replace(number_part, formatted_number + "_", 1)
+    return title + ".mp3"
+
+
 
 
 # ... [rest of your script]
@@ -65,10 +72,15 @@ def download_audios(base_url, save_path, first_page, last_page, delay):
             audio_tag = article.find("audio", {"class": "wp-audio-shortcode"})
             if audio_tag:
                 source_tag = audio_tag.find("source")
+                title_tag = article.find("h2")
+                if title_tag:
+                    title = title_tag.text.strip()
+                    file_name = format_filename(title)
+                else:
+                    continue  # Skip to next article if no title is found
+
                 if source_tag and 'src' in source_tag.attrs:
                     audio_url = source_tag['src']
-                    file_name = unquote(os.path.basename(audio_url))  # Decoding the URL-encoded filename here
-                    file_name = format_filename(file_name)  # Formatting the filename
                     print(f"Preparing to download {file_name}...")
                     try:
                         with requests.get(audio_url, headers=headers, stream=True) as r:
