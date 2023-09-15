@@ -55,38 +55,40 @@ def generate_subtitles(wav_filepath):
     temp_output_file = f"{output_name}_temp_output.txt"
 
     print(f"Generating subtitles for {wav_filepath}...")
-    cmd = f'./main -l ja -m models/ggml-large.bin --threads 8 --output-srt --output-file {output_name} {wav_filepath} 2>&1 | tee {temp_output_file}'
-    print(cmd)
-    subprocess.run(cmd, shell=True, check=True)
+    cmd = [
+        './main',
+        '-l', 'ja',
+        '-m', 'models/ggml-large.bin',
+        '--threads', '8',
+        '--output-srt',
+        '--output-file', f'"{output_name}"',
+        f'"{wav_filepath}"'
+    ]
+    cmd_string = ' '.join(cmd) + f' 2>&1 | tee "{temp_output_file}"'
+    print(cmd_string)
+    subprocess.run(cmd_string, shell=True, check=True)
 
-    try:
-        # Now, read the output from the temp_output_file and check for repeated lines
-        with open(temp_output_file, 'r', encoding="utf-8") as f:
-            lines = f.readlines()
+    # Now, read the output from the temp_output_file and check for repeated lines
+    with open(temp_output_file, 'r', errors='replace') as f:
+        lines = f.readlines()
 
-        consecutive_duplicate_count = 0
-        last_line_content = ""
-        for line in lines:
-            line_content = line.strip().split(']')[-1].strip()
-            if line_content == last_line_content:
-                consecutive_duplicate_count += 1
-            else:
-                consecutive_duplicate_count = 0
-                last_line_content = line_content
+    consecutive_duplicate_count = 0
+    last_line_content = ""
+    for line in lines:
+        line_content = line.strip().split(']')[-1].strip()
+        if line_content == last_line_content:
+            consecutive_duplicate_count += 1
+        else:
+            consecutive_duplicate_count = 0
+            last_line_content = line_content
 
-            if consecutive_duplicate_count > 5:
-                os.rename(f"{output_name}.srt", f"{output_name}_buggy.srt")
-                break
-    except FileNotFoundError:
-        print(f"Error: Expected output file {temp_output_file} not found. Skipping post-process for this file.")
-    except UnicodeDecodeError:
-        print(f"Error decoding file: {temp_output_file}. Skipping post-process for this file.")
-    except subprocess.CalledProcessError:
-        print(f"CalledProcessError during subtitle generation for {wav_filepath}. Skipping this file.")
-    except Exception as e:
-        print(f"Unexpected error during subtitle generation for {wav_filepath}: {e}. Skipping this file.")
+        if consecutive_duplicate_count > 5:
+            os.rename(f"{output_name}.srt", f"{output_name}_buggy.srt")
+            break
+
     # Optionally, remove the temporary output file
-    # os.remove(temp_output_file)
+    os.remove(temp_output_file)
+
 
 
 def process_directory(directory_path):
