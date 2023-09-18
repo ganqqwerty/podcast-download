@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="beginner podcast downloader">
+    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="more whitespaces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convert-and-subtitle.py" beforeDir="false" afterPath="$PROJECT_DIR$/convert-and-subtitle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/podcast-download.iml" beforeDir="false" afterPath="$PROJECT_DIR$/podcast-download.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/podcast/download-beginner.py" beforeDir="false" afterPath="$PROJECT_DIR$/podcast/download-beginner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,23 +35,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/iuriikatkov/IdeaProjects/podcast-download/podcast",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/iuriikatkov/IdeaProjects/podcast-download/podcast&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "HTML"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;HTML&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/podcast" />
@@ -65,7 +65,7 @@
       <recent name="$PROJECT_DIR$/podcast" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.download-beginner">
+  <component name="RunManager" selected="Python.download-fukushuconteppei">
     <configuration name="download-beginner" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="podcast-download" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,6 +81,182 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download-beginner.py" />
       <option name="PARAMETERS" value="--baseUrl=https://nihongoconteppei.com --savePath=$PROJECT_DIR$/podcast/teppei_beginner --firstPage=1 --lastPage=5 --delay=1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download-bizarrestories" type="PythonConfigurationType" factoryName="Python">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/podcast" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download.py" />
+      <option name="PARAMETERS" value="--baseUrl=http://bizarrestories.learnjapanesewhilesleeping.com --savePath=$PROJECT_DIR$/podcast/teppei_bizarrestories --firstPage=1 --lastPage=1 --delay=1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download-essential" type="PythonConfigurationType" factoryName="Python">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/podcast" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download-beginner.py" />
+      <option name="PARAMETERS" value="--baseUrl=http://essential.nihongoconteppei.com --savePath=$PROJECT_DIR$/podcast/teppei_essential --firstPage=1 --lastPage=1 --delay=1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download-fukushuconteppei" type="PythonConfigurationType" factoryName="Python">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/podcast" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download.py" />
+      <option name="PARAMETERS" value="--baseUrl=http://fukushuconteppei.com/ --savePath=$PROJECT_DIR$/podcast/teppei_fukushuconteppei --firstPage=1 --lastPage=1 --delay=1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download-go" type="PythonConfigurationType" factoryName="Python">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/podcast" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download-beginner.py" />
+      <option name="PARAMETERS" value="--baseUrl=https://go.nihongoconteppei.com/ --savePath=$PROJECT_DIR$/podcast/teppei_go --firstPage=1 --lastPage=1 --delay=1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download-learnjapanesewhilesleeping" type="PythonConfigurationType" factoryName="Python">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/podcast" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download.py" />
+      <option name="PARAMETERS" value="--baseUrl=http://learnjapanesewhilesleeping.com --savePath=$PROJECT_DIR$/podcast/teppei_learnjapanesewhilesleeping --firstPage=1 --lastPage=1 --delay=1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download-nihongoconteppeiz" type="PythonConfigurationType" factoryName="Python">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/podcast" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download-beginner.py" />
+      <option name="PARAMETERS" value="--baseUrl=https://nihongoconteppeiz.com/ --savePath=$PROJECT_DIR$/podcast/teppei_nihongoconteppeiz --firstPage=1 --lastPage=5 --delay=60" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download-sleep" type="PythonConfigurationType" factoryName="Python">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/podcast" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download-beginner.py" />
+      <option name="PARAMETERS" value="--baseUrl=http://sleep.nihongoconteppei.com/ --savePath=$PROJECT_DIR$/podcast/teppei_sleep --firstPage=1 --lastPage=1 --delay=1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="download-teppeinorikojapanese" type="PythonConfigurationType" factoryName="Python">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/podcast" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download-beginner.py" />
+      <option name="PARAMETERS" value="--baseUrl=https://teppeinorikojapanese.com/ --savePath=$PROJECT_DIR$/podcast/teppei_teppeinorikojapanese --firstPage=1 --lastPage=4 --delay=1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -134,17 +310,17 @@
     </configuration>
     <list>
       <item itemvalue="Python.download-beginner" />
+      <item itemvalue="Python.download-bizarrestories" />
+      <item itemvalue="Python.download-essential" />
+      <item itemvalue="Python.download-fukushuconteppei" />
+      <item itemvalue="Python.download-go" />
+      <item itemvalue="Python.download-learnjapanesewhilesleeping" />
+      <item itemvalue="Python.download-nihongoconteppeiz" />
+      <item itemvalue="Python.download-sleep" />
+      <item itemvalue="Python.download-teppeinorikojapanese" />
       <item itemvalue="Python.download" />
       <item itemvalue="Python.srt2html" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.download" />
-        <item itemvalue="Python.srt2html" />
-        <item itemvalue="Python.srt2html" />
-        <item itemvalue="Python.download" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -156,7 +332,9 @@
       <updated>1693419531565</updated>
       <workItem from="1693419532814" duration="10954000" />
       <workItem from="1693602585955" duration="18102000" />
-      <workItem from="1694474319423" duration="61554000" />
+      <workItem from="1694474319423" duration="67664000" />
+      <workItem from="1694911456464" duration="652000" />
+      <workItem from="1694992260404" duration="6212000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1693420959495</created>
@@ -228,7 +406,28 @@
       <option name="project" value="LOCAL" />
       <updated>1694711901040</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="converter made more robust, downloader for beginners">
+      <created>1694742013360</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1694742013360</updated>
+    </task>
+    <task id="LOCAL-00012" summary="threads, more checks">
+      <created>1694743387785</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1694743387785</updated>
+    </task>
+    <task id="LOCAL-00013" summary="more whitespaces">
+      <created>1694777819781</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694777819781</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,11 +497,14 @@
     <MESSAGE value="all kinds of scripts for podcasts added" />
     <MESSAGE value="pretty bad version of kytea guessing furigana" />
     <MESSAGE value="beginner podcast downloader" />
-    <option name="LAST_COMMIT_MESSAGE" value="beginner podcast downloader" />
+    <MESSAGE value="converter made more robust, downloader for beginners" />
+    <MESSAGE value="threads" />
+    <MESSAGE value="threads, more checks" />
+    <MESSAGE value="whitespaces in the filenames" />
+    <MESSAGE value="more whitespaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="more whitespaces" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/podcast_download$download.coverage" NAME="download Coverage Results" MODIFIED="1694710887039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
-    <SUITE FILE_PATH="coverage/podcast_download$srt2html.coverage" NAME="srt2html Coverage Results" MODIFIED="1694310257465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/podcast_download$download_beginner.coverage" NAME="download-beginner Coverage Results" MODIFIED="1694712200707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
+    <SUITE FILE_PATH="coverage/podcast_download$download_nihongoconteppeiz.coverage" NAME="download-nihongoconteppeiz Coverage Results" MODIFIED="1695024662650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
   </component>
 </project>
