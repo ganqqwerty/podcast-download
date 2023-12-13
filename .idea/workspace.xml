@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="more whitespaces">
+    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="beginner downloader check for existing filenames">
+      <change afterPath="$PROJECT_DIR$/count_mp3_duration.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/srt_to_anki.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/srt_to_anki_dir.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/podcast-download.iml" beforeDir="false" afterPath="$PROJECT_DIR$/podcast-download.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/podcast/download-beginner.py" beforeDir="false" afterPath="$PROJECT_DIR$/podcast/download-beginner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,16 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/convert-and-subtitle.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/move_files.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/podcast/download-beginner.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/podcast/download.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/requirements.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/srt2html.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/venv/lib/python3.9/site-packages/requests/api.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -44,10 +56,12 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;,
       &quot;HTML&quot;
     ]
   }
@@ -65,7 +79,7 @@
       <recent name="$PROJECT_DIR$/podcast" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.download-fukushuconteppei">
+  <component name="RunManager" selected="Python.srt_to_anki_dir">
     <configuration name="download-beginner" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="podcast-download" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,7 +94,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download-beginner.py" />
-      <option name="PARAMETERS" value="--baseUrl=https://nihongoconteppei.com --savePath=$PROJECT_DIR$/podcast/teppei_beginner --firstPage=1 --lastPage=5 --delay=1" />
+      <option name="PARAMETERS" value="--baseUrl=https://nihongoconteppei.com --savePath=$PROJECT_DIR$/podcast/teppei_beginner --firstPage=1 --lastPage=1 --delay=15" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -146,7 +160,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download.py" />
-      <option name="PARAMETERS" value="--baseUrl=http://fukushuconteppei.com/ --savePath=$PROJECT_DIR$/podcast/teppei_fukushuconteppei --firstPage=1 --lastPage=1 --delay=1" />
+      <option name="PARAMETERS" value="--baseUrl=http://fukushuconteppei.com/ --savePath=$PROJECT_DIR$/podcast/teppei_fukushuconteppei --firstPage=2 --lastPage=2 --delay=60" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -264,7 +278,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="download" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="download-teppeioriginal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="podcast-download" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -278,7 +292,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/podcast/download.py" />
-      <option name="PARAMETERS" value="--baseUrl=https://nihongoconteppei.com --savePath=$PROJECT_DIR$/podcast/teppei_beginner --firstPage=1 --lastPage=5 --delay=1" />
+      <option name="PARAMETERS" value="--baseUrl=https://original.nihongoconteppei.com --savePath=$PROJECT_DIR$/podcast/teppei_original_archives --firstPage=1 --lastPage=10 --delay=180" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -308,6 +322,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="srt_to_anki" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/srt_to_anki.py" />
+      <option name="PARAMETERS" value="--audio_file $PROJECT_DIR$/podcast/teppei_beginner/0062_ゴミ捨てについて！.mp3 --srt_file $PROJECT_DIR$/podcast/teppei_beginner/0062_ゴミ捨てについて！.srt --output_folder $PROJECT_DIR$/cutted-mp3s --show_name &quot;Teppei Beginner&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="srt_to_anki_dir" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="podcast-download" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/srt_to_anki_dir.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.download-beginner" />
       <item itemvalue="Python.download-bizarrestories" />
@@ -318,9 +376,18 @@
       <item itemvalue="Python.download-nihongoconteppeiz" />
       <item itemvalue="Python.download-sleep" />
       <item itemvalue="Python.download-teppeinorikojapanese" />
-      <item itemvalue="Python.download" />
+      <item itemvalue="Python.srt_to_anki_dir" />
+      <item itemvalue="Python.srt_to_anki" />
+      <item itemvalue="Python.download-teppeioriginal" />
       <item itemvalue="Python.srt2html" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.srt_to_anki_dir" />
+        <item itemvalue="Python.srt_to_anki" />
+        <item itemvalue="Python.download-teppeioriginal" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -334,7 +401,16 @@
       <workItem from="1693602585955" duration="18102000" />
       <workItem from="1694474319423" duration="67664000" />
       <workItem from="1694911456464" duration="652000" />
-      <workItem from="1694992260404" duration="6212000" />
+      <workItem from="1694992260404" duration="14581000" />
+      <workItem from="1695663348096" duration="1207000" />
+      <workItem from="1695864329063" duration="1819000" />
+      <workItem from="1695982892948" duration="604000" />
+      <workItem from="1696125224873" duration="11056000" />
+      <workItem from="1696333495657" duration="2744000" />
+      <workItem from="1697994474208" duration="7651000" />
+      <workItem from="1699043348399" duration="5616000" />
+      <workItem from="1702322961442" duration="3985000" />
+      <workItem from="1702400015106" duration="2955000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1693420959495</created>
@@ -427,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694777819781</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="beginner downloader check for existing filenames">
+      <created>1695080511954</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1695080511954</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,9 +585,16 @@
     <MESSAGE value="threads, more checks" />
     <MESSAGE value="whitespaces in the filenames" />
     <MESSAGE value="more whitespaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="more whitespaces" />
+    <MESSAGE value="beginner downloader check for existing filenames" />
+    <option name="LAST_COMMIT_MESSAGE" value="beginner downloader check for existing filenames" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/podcast_download$download_fukushuconteppei.coverage" NAME="download-fukushuconteppei Coverage Results" MODIFIED="1695085392546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
+    <SUITE FILE_PATH="coverage/podcast_download$download_teppeioriginal.coverage" NAME="download-teppeioriginal Coverage Results" MODIFIED="1695129778403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
     <SUITE FILE_PATH="coverage/podcast_download$download_nihongoconteppeiz.coverage" NAME="download-nihongoconteppeiz Coverage Results" MODIFIED="1695024662650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
+    <SUITE FILE_PATH="coverage/podcast_download$srt_to_anki_dir.coverage" NAME="srt_to_anki_dir Coverage Results" MODIFIED="1698252355175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/podcast_download$download_beginner.coverage" NAME="download-beginner Coverage Results" MODIFIED="1696125366940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
+    <SUITE FILE_PATH="coverage/podcast_download$srt_to_anki.coverage" NAME="srt_to_anki Coverage Results" MODIFIED="1698250860884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/podcast_download$download_bizarrestories.coverage" NAME="download-bizarrestories Coverage Results" MODIFIED="1696161352168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
   </component>
 </project>
