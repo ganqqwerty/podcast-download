@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="beginner downloader check for existing filenames">
-      <change afterPath="$PROJECT_DIR$/count_mp3_duration.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srt_to_anki.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srt_to_anki_dir.py" afterDir="false" />
+    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="srt to anki">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srt_to_anki.py" beforeDir="false" afterPath="$PROJECT_DIR$/srt_to_anki.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srt_to_anki_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/srt_to_anki_dir.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,31 +45,40 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2UiPfNiJO1LVTazkw5RCkriOyjM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/iuriikatkov/IdeaProjects/podcast-download/podcast&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/iuriikatkov/IdeaProjects/podcast-download/podcast",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Python&quot;,
-      &quot;HTML&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python",
+      "HTML"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/podcast" />
@@ -79,7 +92,7 @@
       <recent name="$PROJECT_DIR$/podcast" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.srt_to_anki_dir">
+  <component name="RunManager" selected="Python.download-nihongoconteppeiz">
     <configuration name="download-beginner" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="podcast-download" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -410,7 +423,12 @@
       <workItem from="1697994474208" duration="7651000" />
       <workItem from="1699043348399" duration="5616000" />
       <workItem from="1702322961442" duration="3985000" />
-      <workItem from="1702400015106" duration="2955000" />
+      <workItem from="1702400015106" duration="9528000" />
+      <workItem from="1703072984763" duration="1370000" />
+      <workItem from="1703106714258" duration="597000" />
+      <workItem from="1704201674406" duration="179000" />
+      <workItem from="1704201862607" duration="117000" />
+      <workItem from="1704202001087" duration="6330000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1693420959495</created>
@@ -510,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695080511954</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="srt to anki">
+      <created>1702489143968</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702489143968</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,12 +553,16 @@
     </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="97e4f71c-5a8b-4186-b866-8f85a70aa9db" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="97e4f71c-5a8b-4186-b866-8f85a70aa9db">
           <value>
             <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -552,6 +581,7 @@
                   </entry>
                 </map>
               </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
             </State>
           </value>
         </entry>
@@ -560,11 +590,6 @@
             <State />
           </value>
         </entry>
-      </map>
-    </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="97e4f71c-5a8b-4186-b866-8f85a70aa9db" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -586,15 +611,16 @@
     <MESSAGE value="whitespaces in the filenames" />
     <MESSAGE value="more whitespaces" />
     <MESSAGE value="beginner downloader check for existing filenames" />
-    <option name="LAST_COMMIT_MESSAGE" value="beginner downloader check for existing filenames" />
+    <MESSAGE value="srt to anki" />
+    <option name="LAST_COMMIT_MESSAGE" value="srt to anki" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/podcast_download$download_fukushuconteppei.coverage" NAME="download-fukushuconteppei Coverage Results" MODIFIED="1695085392546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
+    <SUITE FILE_PATH="coverage/podcast_download$srt_to_anki_dir.coverage" NAME="srt_to_anki_dir Coverage Results" MODIFIED="1704204052873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/podcast_download$download_teppeioriginal.coverage" NAME="download-teppeioriginal Coverage Results" MODIFIED="1695129778403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
-    <SUITE FILE_PATH="coverage/podcast_download$download_nihongoconteppeiz.coverage" NAME="download-nihongoconteppeiz Coverage Results" MODIFIED="1695024662650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
-    <SUITE FILE_PATH="coverage/podcast_download$srt_to_anki_dir.coverage" NAME="srt_to_anki_dir Coverage Results" MODIFIED="1698252355175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/podcast_download$download_beginner.coverage" NAME="download-beginner Coverage Results" MODIFIED="1696125366940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
+    <SUITE FILE_PATH="coverage/podcast_download$download_nihongoconteppeiz.coverage" NAME="download-nihongoconteppeiz Coverage Results" MODIFIED="1704206223621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
+    <SUITE FILE_PATH="coverage/podcast_download$download_beginner.coverage" NAME="download-beginner Coverage Results" MODIFIED="1704204525667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
     <SUITE FILE_PATH="coverage/podcast_download$srt_to_anki.coverage" NAME="srt_to_anki Coverage Results" MODIFIED="1698250860884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/podcast_download$download_fukushuconteppei.coverage" NAME="download-fukushuconteppei Coverage Results" MODIFIED="1695085392546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
     <SUITE FILE_PATH="coverage/podcast_download$download_bizarrestories.coverage" NAME="download-bizarrestories Coverage Results" MODIFIED="1696161352168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
   </component>
 </project>

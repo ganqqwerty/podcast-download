@@ -5,7 +5,7 @@ from concurrent.futures import ProcessPoolExecutor
 
 def process_file_pair(args):
     mp3_path, srt_path, output_folder, show_name = args
-    subprocess.run(['python', 'srt_to_anki.py',
+    subprocess.run(['python3', 'srt_to_anki.py',
                     '--audio_file', mp3_path,
                     '--srt_file', srt_path,
                     '--output_folder', output_folder,
