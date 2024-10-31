@@ -21,7 +21,7 @@ def format_filename(file_name):
     match = re.match(r'^(\d+)', file_name)
     if match:
         number_part = match.group(1)
-        formatted_number = f"{int(number_part):03}"  # Format the number to have at least three digits
+        formatted_number = f"{int(number_part):04}"  # Format the number to have at least three digits
         return file_name.replace(number_part, formatted_number, 1)
     return file_name
 
@@ -66,12 +66,19 @@ def download_audios(base_url, save_path, first_page, last_page, delay):
                 if source_tag and 'src' in source_tag.attrs:
                     audio_url = source_tag['src']
                     file_name = unquote(os.path.basename(audio_url))  # Decoding the URL-encoded filename here
-                    file_name = format_filename(file_name)  #
+                    file_name = format_filename(file_name)
+
+                    # Check if file already exists
+                    file_path = os.path.join(save_path, file_name)
+                    if os.path.exists(file_path):
+                        print(f"{file_name} already exists. Skipping download.")
+                        continue
+
                     print(f"Preparing to download {file_name}...")
                     try:
                         with requests.get(audio_url, headers=headers, stream=True) as r:
                             r.raise_for_status()
-                            with open(os.path.join(save_path, file_name), 'wb') as file:
+                            with open(file_path, 'wb') as file:
                                 for chunk in r.iter_content(chunk_size=8192):
                                     file.write(chunk)
                         print(f"{file_name} downloaded successfully!")

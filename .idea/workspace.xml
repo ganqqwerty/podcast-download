@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="srt to anki">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b334e197-d636-424d-9aa8-f74c83dcebf8" name="Changes" comment="impprovements to srt to anki">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srt_to_anki.py" beforeDir="false" afterPath="$PROJECT_DIR$/srt_to_anki.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srt_to_anki_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/srt_to_anki_dir.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/podcast/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/podcast/download.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +28,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ganqqwerty"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ganqqwerty/podcast-download.git",
+    "accountId": "7ceb496c-bbbc-477b-a00e-e3591f1d4d28"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/convert-and-subtitle.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/move_files.py" root0="FORCE_HIGHLIGHTING" />
@@ -42,6 +50,10 @@
     <setting file="file://$PROJECT_DIR$/venv/lib/python3.9/site-packages/requests/api.py" root0="SKIP_INSPECTION" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.html" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -60,7 +72,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/iuriikatkov/IdeaProjects/podcast-download/podcast",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/iuriikatkov/IdeaProjects/podcast-download",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,6 +100,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/podcast/teppei_teppeinorikojapanese" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/srt2html" />
       <recent name="$PROJECT_DIR$/podcast/processed" />
@@ -95,6 +110,7 @@
   <component name="RunManager" selected="Python.download-nihongoconteppeiz">
     <configuration name="download-beginner" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -117,6 +133,7 @@
     </configuration>
     <configuration name="download-bizarrestories" type="PythonConfigurationType" factoryName="Python">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -139,6 +156,7 @@
     </configuration>
     <configuration name="download-essential" type="PythonConfigurationType" factoryName="Python">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -161,6 +179,7 @@
     </configuration>
     <configuration name="download-fukushuconteppei" type="PythonConfigurationType" factoryName="Python">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -183,6 +202,7 @@
     </configuration>
     <configuration name="download-go" type="PythonConfigurationType" factoryName="Python">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -205,6 +225,7 @@
     </configuration>
     <configuration name="download-learnjapanesewhilesleeping" type="PythonConfigurationType" factoryName="Python">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -227,6 +248,7 @@
     </configuration>
     <configuration name="download-nihongoconteppeiz" type="PythonConfigurationType" factoryName="Python">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -249,6 +271,7 @@
     </configuration>
     <configuration name="download-sleep" type="PythonConfigurationType" factoryName="Python">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -271,6 +294,7 @@
     </configuration>
     <configuration name="download-teppeinorikojapanese" type="PythonConfigurationType" factoryName="Python">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -293,6 +317,7 @@
     </configuration>
     <configuration name="download-teppeioriginal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -315,6 +340,7 @@
     </configuration>
     <configuration name="srt2html" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -337,6 +363,7 @@
     </configuration>
     <configuration name="srt_to_anki" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -359,6 +386,7 @@
     </configuration>
     <configuration name="srt_to_anki_dir" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="podcast-download" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -402,6 +430,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -429,6 +465,7 @@
       <workItem from="1704201674406" duration="179000" />
       <workItem from="1704201862607" duration="117000" />
       <workItem from="1704202001087" duration="6330000" />
+      <workItem from="1730327019151" duration="14027000" />
     </task>
     <task id="LOCAL-00001" summary="first draft">
       <created>1693420959495</created>
@@ -617,6 +654,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/podcast_download$srt_to_anki_dir.coverage" NAME="srt_to_anki_dir Coverage Results" MODIFIED="1704204052873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/podcast_download$download_teppeioriginal.coverage" NAME="download-teppeioriginal Coverage Results" MODIFIED="1695129778403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
+    <SUITE FILE_PATH="coverage/podcast_download$download.coverage" NAME="download Coverage Results" MODIFIED="1693422185658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
     <SUITE FILE_PATH="coverage/podcast_download$download_nihongoconteppeiz.coverage" NAME="download-nihongoconteppeiz Coverage Results" MODIFIED="1704206223621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
     <SUITE FILE_PATH="coverage/podcast_download$download_beginner.coverage" NAME="download-beginner Coverage Results" MODIFIED="1704204525667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/podcast" />
     <SUITE FILE_PATH="coverage/podcast_download$srt_to_anki.coverage" NAME="srt_to_anki Coverage Results" MODIFIED="1698250860884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
